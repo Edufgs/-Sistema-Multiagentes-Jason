@@ -1,0 +1,25 @@
+/* Jason Project */
+
+/* Nome: Eduardo Gonçalves da Silva */
+
+/*	Projeto onde o filho deseja sair para uma festa mas primeiro precisa fazer os serviços de casa. 
+	O agente filho pergunta para o agente pai se poderia ir a uma festa mas o pai diz para ele falar com o agente mae. 
+	A mae manda ele fazer os serviços de casa antes de ir a festa e então o filho faz um de cada vez.
+	Depois de terminar o serviço a mãe pergunta para o pai se o filho pode ir para festa mas o pai avisa que ainda precisa lavar o carro para poder ir.
+	O filho lava e o pai libera o filho para a festa.
+	
+	O programa começa no agente filho
+*/
+
+MAS projetoFesta {
+
+    infrastructure: Centralised
+
+    agents:
+
+        mae;
+        pai;
+        filho;
+}
+
+

@@ -1,0 +1,28 @@
+// Agent mae in project ProjetoFesta.mas2j
+
+//Crenças iniciais
+servicos(2).
+sujo(casa).
+sujo(louca).
+
+
++filho(festa) <- 
+	!verificaservico.
+	
++!verificaservico: sujo(X) <-
+	.print("Mãe: Só vai se fizer todos os serviços de casa.");
+	.send(filho,tell, sujo(X)).
+
++!verificaservico: servicos(X) & X == 0 <-
+	.print("Mãe: todos os serviços feitos.");
+	.print("Mãe: Vou perguntar ao seu pai.");
+	.print("Mãe: O filho pode ir a festa?");
+	.send(pai,tell, filho(festa)).
+
++limpo(X): servicos(R) <-
+	.print("Mãe: Legal, ", X, " limpa.");
+	.send(filho,untell, sujo(X));
+	-+servicos(R-1);
+	-sujo(X).
+	
+

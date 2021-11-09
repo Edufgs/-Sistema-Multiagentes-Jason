@@ -1,0 +1,20 @@
+// Agent pai in project ProjetoFesta.mas2j
+
+//Crenças iniciais
+sujo(carro).
+pergunta(mae).
+
++filho(festa) <-
+	.print("Pai: só vai se limpar o carro.");
+	.send(mae, tellHow, "+!recado(filho) <- .print(\"Mãe: Seu pai falou para limpar o carro primeiro\"); .send(filho, achieve, pedido(pai)).");
+	.send(mae, achieve, recado(filho)).
+	
++!ensinando(lavar) <-
+	.print("Pai: Vou te ensinar.");
+	.send(filho, tellHow, "+!lava(carro) <- .print(\"Filho: Limpando carro\"); .print(\"Filho: Carro limpo\"); .send(pai, tell, limpo(carro)).");
+	.send(filho, achieve, lava(carro)).
+	
++limpo(carro) <- 
+	-sujo(carro);
+	.print("Pai: Agora voce pode ir a festa.");
+	.send(filho, untell, pergunta(mae)).
