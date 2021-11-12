@@ -1,6 +1,6 @@
 /* Jason Project */
 
-/* Nome: Eduardo Gonçalves da Silva */
+/* Nome: Eduardo Gonçalves da Silva e Mailon Bruno */
 
 /*	Projeto onde o filho deseja sair para uma festa mas primeiro precisa fazer os serviços de casa. 
 	O agente filho pergunta para o agente pai se poderia ir a uma festa mas o pai diz para ele falar com o agente mae. 
@@ -16,7 +16,6 @@ MAS projetoFesta {
     infrastructure: Centralised
 
     agents:
-
         mae;
         pai;
         filho;
